@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avise do contrato enviado!</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="styles.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class='itemsContainer'>
+<div>
+
+<h2>Avise do contrato enviado!</h2>
+<h4>Insira os dados abaixo:</h4>
+
+<div>
+<label for='saleMan'>Usuário: </label>
+<select class='select' id='salesMan' onchange="getSalesMan(this)">
+<option value='Mateus'>Mateus</option>
+<option value='Juliano'>Juliano</option>
+<option value='Suzana'>Suzana</option>
+<option value='Priscila'>Priscila</option>
+</select>
+
+<label for='documentType'>Tipo de Contrato: </label>
+<select class='select' id='documentType' onchange="getDocumentType(this)">
+<option value='uso do sistema'>Novo</option>
+<option value='suspensão'>Suspensão</option>
+<option value='adendo de módulo'>Adendo</option>
+<option value='atualização'>Atualização</option>
+</select>
+</div>
+
+<div style='position: relative;'>
+
+<label>Empresa: </label>
+<input class='inputCostumer' onkeyup="getCostumer(this)" ></input>
+
+<label>Email: </label>
+<input class='inputEmail' onkeyup="getEmail(this)"  placeholder='exemplo@exemplo.com'></input>
+
+</div>
+
+<div style='position: relative;'>
+
+<label>Telefone: </label>
+<input 
+class='input' 
+onkeyup="getNumber(this)" 
+value='(44)'
+></input>
+<p class='alert-invalid-phone-number'>*Telefone inválido!</p>
+
+</div>
+
+<a 
+class='btn btn-dark' 
+id= 'sendMessage' 
+href='https://wa.me/whatsappphonenumber/' 
+target='_blank'
+onclick="setTimeout(() => {window.location.reload()}, 1000);"
+>
+<i class="bi bi-whatsapp me-2"></i>
+Iniciar Conversa
+</a>
+
+</div>
+</div>
+</body>
+
+</html>
